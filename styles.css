@@ -1,0 +1,22 @@
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+#monoalphabeticForm{
+  display:none;
+}
+#caesarForm{
+  display:none;
+}
+#MonoalphabeticQuiz{
+  display: none;
+}
+#caesarQuiz{
+  display: none;
+}
+.monoResult{
+  font-size: 30px;
+}

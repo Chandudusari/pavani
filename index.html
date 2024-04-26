@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pavani</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: black;">
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><strong>PAVANI</strong></a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="#" id="home"><b>Home</b></a></li>
+				<li><a href="#" id="about"><b>Caesar Cipher</b></a></li>
+				<li><a href="#" id="contact"><b>Monoalphabetic Cypher</b></a></li>
+				
+			</ul>
+		</div>
+	</nav>
+	<div>
+		<!-- <form id="caesarForm">
+			<h2>Caesar Cipher</h2>
+			<label for="caesarPlaintext">Enter Text:</label>
+			<input type="text" id="caesarPlaintext">
+			<label for="shift">Enter Shift Value:</label>
+			<input type="number" id="shift" min="1" max="25" value="3">
+			<button type="button" onclick="encryptCaesar()">Encrypt</button>
+			<button type="button" onclick="decryptCaesar()">Decrypt</button>
+			<span id="caesarResult"></span>
+		</form> -->
+
+	</div>
+	<div id="homePage" class="container jumbotron page active">
+
+		<strong></strong><h2>What is encryption and how important is it?</h2></strong>
+		<p>
+			Organizations have three critical tools at their disposal to ensure strong cybersecurity: encryption, authentication, and authorization. Encryption is one of the most helpful, first-level layers to protecting your data and staying cyber resilient.
+
+In this blog, you’ll learn about what it is and what happens when you encrypt your data. You’ll also discover how end-to-end data encryption helps to prevent data breaches so you can better defend your organization from cyberattacks.
+		</p>
+		<p style="text-align:center"><br><img src="https://www.researchgate.net/profile/Mohammad-Masoud/publication/281677315/figure/fig1/AS:525353252814848@1502265384922/Encryption-Decryption-Flow.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#69;&#95;&#110;&#40;&#120;&#41;&#61;&#40;&#120;&#43;&#110;&#41;&#109;&#111;&#100;&#92;&#32;&#50;&#54;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;" title="Rendered by QuickLaTeX.com" height="278" width="50%" style="vertical-align: -7px;"/><br></p>
+		<h3>The first tool: Encryption</h3>
+		<p>
+In simple terms, encryption is the process through which data is encoded so that it remains hidden from or inaccessible to unauthorized users. It helps protect private information, sensitive data, and can enhance the security of communication between client apps and servers. In essence, when your data is encrypted, even if an unauthorized person or entity gains access to it, they will not be able to read it.
+
+<h3>How to encrypt data</h3> 
+<p>
+The process itself is fairly straightforward: an encryption key uses an algorithm to translate (encode) plaintext or readable data into unreadable data or ciphertext. Only the corresponding decryption key can decode the scrambled ciphertext back into readable plaintext.</p>
+<h3>What does Security-of-Security mean?</h3>
+<p>
+The term, Security-of-Security, is about making sure all aspects of your physical security system, including communications, servers, and data, are as secure as possible. You should be able to keep your entire system safe from cyber threats and attacks as well as illegal or unauthorized access.
+
+That’s why one of the first steps is to prioritize the importance of securing the data in your physical security system. Specifically, it’s good practice to assess the types of information you collect and what that information allows people to do.
+
+But it doesn’t stop there. Enhancing your cybersecurity defenses requires constant re-assessment and new strategies. There’s also a growing need for continuous verification rather than just hardening networks and systems.
+
+For this, organizations need access to more automated tools such as cybersecurity risk scoring, system vulnerability alerts, and frequent firmware and hardware updates. Partnering with a provider that prioritizes cybersecurity in the development of their solutions can help. You’ll not only be able to stay informed about the latest cyber threats, but you’ll also get the right tools to mitigate them.</p>
+<h3>What Does Decryption Mean?</h3><p>
+Decryption is the process of transforming data that has been rendered unreadable through encryption back to its unencrypted form. In decryption, the system extracts and converts the garbled data and transforms it to texts and images that are easily understandable not only by the reader but also by the system. Decryption may be accomplished manually or automatically. It may also be performed with a set of keys or password</p>
+
+
+
+<p style="text-align:center"><br><img src="https://media.licdn.com/dms/image/D5612AQF1reSN7_oJUA/article-cover_image-shrink_600_2000/0/1695572729306?e=2147483647&v=beta&t=MNtws7Y3B9N_INX4mldMcFgmFu14CmNN5DWZbzZ8Ack" alt="&#69;&#95;&#110;&#40;&#120;&#41;&#61;&#40;&#120;&#43;&#110;&#41;&#109;&#111;&#100;&#92;&#32;&#50;&#54;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;" title="Rendered by QuickLaTeX.com" height="278" width="50%" style="vertical-align: -7px;"/><br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<h3>Monoalphabetic Cipher vs Polyalphabetic Cipher:</h3>
+		<h4> Understanding the Differences
+		Both monoalphabetic cipher and polyalphabetic cipher are types of ciphers used in cryptography, with distinct characteristics. In a monoalphabetic cipher, each symbol in the plaintext is replaced by a fixed symbol in the cipher text. On the other hand, a polyalphabetic cipher employs multiple substitution alphabets for the substitution process. Let's delve deeper into these concepts.</h4>
+		<h3>Comparing Monoalphabetic Cipher and Polyalphabetic Cipher</h3>
+	</h2>
+	<p>
+		Here are the key differences between Monoalphabetic Cipher and Polyalphabetic Cipher.
+	</p>
+	<table class="table table-bordered">
+		<tbody>
+			<tr>
+				<td>
+					<strong>
+						Parameters
+					</strong>
+				</td>
+				<td>
+					<strong>
+						Monoalphabetic Cipher
+					</strong>
+				</td>
+				<td>
+					<strong>
+						Polyalphabetic Cipher
+					</strong>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Basics
+				</td>
+				<td>
+					It's a type of cipher where each symbol in the plaintext is replaced by a fixed symbol in the cipher text.
+				</td>
+				<td>
+					It's a type of cipher that employs multiple substitution alphabets for encoding.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Relationship between Plaintext and Cipher Text
+				</td>
+				<td>
+					There exists a one-to-one relationship between plaintext characters and cipher text characters.
+				</td>
+				<td>
+					There exists a one-to-many relationship between plaintext characters and cipher text characters.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Type of Substitution Cipher
+				</td>
+				<td>
+					It is a simple form of substitution cipher.
+				</td>
+				<td>
+					It is a complex form of substitution cipher involving multiple alphabets.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Mapping of Characters
+				</td>
+				<td>
+					The characters in the plaintext are mapped to unique characters in the cipher text.
+				</td>
+				<td>
+					The characters in the plaintext are mapped to multiple characters in the cipher text.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Stream Cipher
+				</td>
+				<td>
+					A stream cipher can be a monoalphabetic cipher if the key value does not depend on the position of the plaintext character in the text stream.
+				</td>
+				<td>
+					A stream cipher can be a polyalphabetic cipher if the key value does not depend on the position of the plaintext character in the text stream.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Example
+				</td>
+				<td>
+					Examples include shift cipher, reverse cipher, and other monoalphabetic ciphers.
+				</td>
+				<td>
+					Examples include Beaufort cipher, Alberti cipher, and other polyalphabetic ciphers.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Security
+				</td>
+				<td>
+					Monoalphabetic ciphers are generally less secure than polyalphabetic ciphers.
+				</td>
+				<td>
+					Polyalphabetic ciphers are usually more secure than monoalphabetic ciphers.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Usage
+				</td>
+				<td>
+					It is a substitution cipher that employs a fixed mapping of plaintext to cipher text characters throughout the text.
+				</td>
+				<td>
+					It is a substitution cipher that decodes plaintext letters in different positions using multiple cryptoalphabets.
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- this is alll about the about page -->
+<div class="container page" id="aboutPage">
+
+	<div class="jumbotron">
+
+
+		<div class="container">
+			<div class="main_wrapper" style="display:flex; overflow-y: hidden">
+				<div style="width: 100%;">
+					<div class="article-title">
+						<h1 style="margin:25px">Caesar Cipher in Cryptography</h1>
+						<div style="margin-left: 30%;">
+							<button class="btn btn-primary" onclick="showCaesar()">ENCRYPT & DECREPT HERE</button>
+							<button class="btn btn-primary" onclick="caesarQuiz()">QUIZ</button>
+						</div>
+					</div>
+					<div class="container" id="caesarQuiz">
+                            				<h1 class="text-center">Quiz</h1>
+                            				<form id="quizFormCaesar">
+                            					<div class="form-group">
+                            						<label for="q1">Question 1: What is encrypted result for 'hello world' with shiftvalue 3?</label>
+                            						<select class="form-control" id="q1" required>
+                            							<option value="">Select Answer</option>
+                            							<option value="1">khoor zruog</option>
+                            							<option value="2">zruog khoor</option>
+                            							<option value="3">hoork zruog</option>
+                            						</select>
+                            					</div>
+                            					<div class="form-group">
+                            						<label for="q2">Question 2: What is encrypted result for 'randomly' with shiftvalue 3?</label>
+                            						<select class="form-control" id="q2" required>
+                            							<option value="">Select Answer</option>
+                            							<option value="1">udqklopl</option>
+                            							<option value="2">udqgrpob</option>
+                            							<option value="3">udqondon</option>
+                            						</select>
+                            					</div>
+                            					<div class="form-group">
+                            						<label for="q3">Question 3: What is encrypted result for 'junior' with shiftvalue 23?</label>
+                            						<select class="form-control" id="q3" required>
+                            							<option value="">Select Answer</option>
+                            							<option value="1">grkflp</option>
+                            							<option value="2">grkflu</option>
+                            							<option value="3">grkflo</option>
+                            						</select>
+                            					</div>
+                            					<div class="form-group">
+                            						<label for="q4">What is decrypted result for 'hello world' with shiftvalue 3?</label>
+                            						<select class="form-control" id="q4" required>
+                            							<option value="">Select Answer</option>
+                            							<option value="1">ebiil tloia</option>
+                            							<option value="2">ebiil tlola</option>
+                            							<option value="3">ebiil mmoia</option>
+                            						</select>
+                            					</div>
+                            					<div class="form-group">
+                            						<label for="q5">Question 5: What is decrypted result for 'helping' with shiftvalue 3?</label>
+                            						<select class="form-control" id="q5" required>
+                            							<option value="">Select Answer</option>
+                            							<option value="1">ebimghd</option>
+                            							<option value="2">ebimfkd</option>
+                            							<option value="3">ebimmrd</option>
+                            						</select>
+                            					</div>
+                            					<div class="form-group">
+                            						<label for="q6">Question 6: What is encrypted result for 'randomness' with shiftvalue 13</label>
+                            						<select class="form-control" id="q6" required>
+                            							<option value="">Select Answer</option>
+                            							<option value="1">enaqbzargf</option>
+                            							<option value="2">enaqbzasff</option>
+                            							<option value="3">enaqbzarff</option>
+                            						</select>
+                            					</div>
+                            					<button type="submit" class="btn btn-primary">Submit</button>
+                            				</form>
+                            				<div id="result" class="mt-4"></div>
+                            			</div>
+					<div class="container form-group" id="caesarForm">
+						<label for="caesarPlaintext">caesarPlaintext:</label>
+						<input type="text" class="form-control" id="caesarPlaintext">
+						<label>Enter Shift Value:</label>
+						<input type="text" class="form-control" id="shift" min="1" max="25" value="3">
+						<button class="btn btn-primary" type="button" style="margin:20px;" onclick="encryptCaesar()">Encrypt</button>
+						<button class="btn btn-primary" type="button" style="margin:20px;" onclick="decryptCaesar()">Decrypt</button>
+						<div class="badge badge-success monoResult" id="caesarResult"></div>
+					</div>
+				</div>
+
+				<!-- three dot menu -->
+				<div class="three_dot_dropdown">                                     <div style="display: flex;">
+					<div pid="138075" ptitle="Caesar Cipher in Cryptography" class="article--viewer_improve tooltip">
+						<span class="improve_tooltiptext">Improve</span>
+						<div class="three_dot_dropdown_div three_dot_dropdown_improve" onclick="improveArticleCall()" style="margin-top: 15px;">
+							<div class="improve_dot_dropdown_inner_div">
+								<i class="gfg-icon gfg-icon-pencil  gfg-icon_edit" style="position: relative; z-index: 3;"></i>
+							</div>
+						</div>
+<!-- <button onclick="improveArticleCall()">
+                                                    <i class="gfg-icon gfg-icon_edit"></i>
+                                                </button> -->
+                                            </div>                                     <!-- three dots -->
+
+                                        </div>
+                                    </div> 
+                                </div>
+                                <!-- menu -->
+                                <div id="myDropdown" class="three_dot_dropdown_content">
+                                	<div class="article-buttons drop" onmouseleave="closeKebabMenu()">
+
+                                		<div pid="138075" ptitle="Caesar Cipher in Cryptography" class="improve_article--viewer tooltip">
+                                			<div class="three_dot_dropdown_div three_dot_dropdown_improve" onclick="improveArticleCall()" style="margin-top: 1px;">
+                                				<div class="three_dot_dropdown_inner_div improve_dot_dropdown_inner_div">
+                                					<i class="gfg-icon gfg-icon-pencil  gfg-icon_edit"></i>
+                                					<span>Improve</span>
+                                				</div>
+                                			</div>
+                                		</div>                                             <div pid="138075" class="article--viewer_like tooltip">
+                                			<div class="three_dot_dropdown_div three_dot_dropdown_likearticle" onmouseleave='toggleLikeElementVisibility("showLikesContainer", false)'  onmouseenter='toggleLikeElementVisibility("showLikesContainer", true)'>
+                                				<div class="showLikesContainer"> 
+                                					<span class="likeTooltip">Like Article</span>
+                                				</div>
+                                				<div class="three_dot_dropdown_inner_div" data-gfg-action="like-article" data-bookmark-value="0">
+                                					<i class="gfg-icon gfg-icon_thumbs"></i>
+                                					<span>Like</span>
+                                				</div>
+                                			</div>
+<!-- <button data-gfg-action="like-article" data-bookmark-value="0">
+                                                    <i class="gfg-icon gfg-icon_thumbs"></i>
+                                                </button> -->
+                                            </div>
+                                            <div pid="138075" class="article--viewer_bookmark tooltip">
+                                            	<div class="three_dot_dropdown_div three_dot_dropdown_save">
+                                            		<div class="three_dot_dropdown_inner_div" data-gfg-action="bookmark-article" data-bookmark-value="0">
+                                            			<i class="gfg-icon gfg-icon_bookmark"></i>
+                                            			<span>Save</span>
+                                            		</div>
+                                            	</div>
+<!-- <button data-gfg-action="bookmark-article" data-bookmark-value="0">
+                                                    <i class="gfg-icon gfg-icon_bookmark"></i>
+                                                </button> -->
+                                            </div>
+                                            <div pid="138075" class="article--viewer_share tooltip">
+                                            	<div class="three_dot_dropdown_div three_dot_dropdown_share" onmouseleave="closeShareModal()" onmouseenter="openShareModal()">
+                                            		<div style="display: flex;align-items: center;" class="three_dot_dropdown_inner_div" data-gfg-action="share-article" data-bookmark-value="0">
+                                            			<i class="gfg-share-icon"></i>
+                                            			<span>Share</span>
+                                            		</div>
+                                            	</div>
+                                            </div>
+                                            <div class="article--viewer_report tooltip">
+                                            	<div class="three_dot_dropdown_div three_dot_dropdown_reportarticle">
+                                            		<div class="three_dot_dropdown_inner_div" data-gfg-action="report-article" onclick="report_article();">
+                                            			<i class="gfg-icon gfg-icon_report"></i>
+                                            			<span>Report</span>
+                                            		</div>
+                                            	</div>
+<!-- <button data-gfg-action="like-article" data-bookmark-value="0">
+                                                    <i class="gfg-icon gfg-icon_thumbs"></i>
+                                                </button> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text">
+                                    	<div><b><h2 style="text-decoration: underline;margin: 30px;">Learning Material</h2></b></div>
+                                    	<ul><li>The Caesar cipher is a simple encryption technique that was used by Julius Caesar to send secret messages to his allies. It works by shifting the letters in the plaintext message by a certain number of positions, known as the &#8220;shift&#8221; or &#8220;key&#8221;.</li><li>The Caesar Cipher technique is one of the earliest and simplest methods of encryption technique. It&#8217;s simply a type of substitution cipher, i.e., each letter of a given text is replaced by a letter with a fixed number of positions down the alphabet. For example with a shift of 1, A would be replaced by B, B would become C, and so on. The method is apparently named after Julius Caesar, who apparently used it to communicate with his officials.</li><li>Thus to cipher a given text we need an integer value, known as a shift which indicates the number of positions each letter of the text has been moved down.&nbsp;<br>The encryption can be represented using&nbsp;modular arithmetic by first transforming the letters into numbers, according to the scheme, A = 0, B = 1,&#8230;, Z = 25. Encryption of a letter&nbsp;by a shift&nbsp;n&nbsp;can be described mathematically as.&nbsp;</li><li>For example, if the shift is 3, then the letter A would be replaced by the letter D, B would become E, C would become F, and so on. The alphabet is wrapped around so that after Z, it starts back at A.</li><li>Here is an example of how to use the Caesar cipher to encrypt the message &#8220;HELLO&#8221; with a shift of 3:</li></ul><ol><li>Write down the plaintext message: HELLO</li><li>Choose a shift value. In this case, we will use a shift of 3.</li><li>Replace each letter in the plaintext message with the letter that is three positions to the right in the alphabet.</li></ol>
+
+                                    	<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;H becomes K (shift 3 from H)</p>
+
+
+
+                                    	<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;E becomes H (shift 3 from E)</p><div id="GFG_AD_gfg_mobile_336x280" style="margin: 5px 0;"></div>
+
+
+
+                                    	<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L becomes O (shift 3 from L)</p>
+
+
+
+                                    	<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L becomes O (shift 3 from L)</p>
+
+
+
+                                    	<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;O becomes R (shift 3 from O)</p>
+
+
+
+                                    	<p>&nbsp; &nbsp; &nbsp; 4.The encrypted message is now &#8220;KHOOR&#8221;.</p>
+
+                                    	<ul><li>To decrypt the message, you simply need to shift each letter back by the same number of positions. In this case, you would shift each letter in &#8220;KHOOR&#8221; back by 3 positions to get the original message, &#8220;HELLO&#8221;.</li></ul><p style="text-align:justify">&nbsp;</p><div id="GFG_AD_Desktop_InContent_ATF_336x280" style="text-align:center;max-height: 280px;"></div><div id="GFG_AD_gfg_mobile_336x280_1" style="margin: 5px 0;"></div>
+
+                                    	<p style="text-align:center"><br><img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-f2a9c1b378871f5c31ce574b5c027b55_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#69;&#95;&#110;&#40;&#120;&#41;&#61;&#40;&#120;&#43;&#110;&#41;&#109;&#111;&#100;&#92;&#32;&#50;&#54;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;" title="Rendered by QuickLaTeX.com" height="27" width="271" style="vertical-align: -7px;"/><br>(Encryption Phase with shift n)</p>
+
+                                    	<p style="text-align:center"><img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-1ae9f4255fa383d45bebd53e702788e7_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#68;&#95;&#110;&#40;&#120;&#41;&#61;&#40;&#120;&#45;&#110;&#41;&#109;&#111;&#100;&#92;&#32;&#50;&#54;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;" title="Rendered by QuickLaTeX.com" height="27" width="272" style="vertical-align: -7px;"/><br>(Decryption Phase with shift n)</p>
+
+                                    	<p style="text-align:center"><img src="https://media.geeksforgeeks.org/wp-content/uploads/ceaserCipher.png" alt="Caesar Cipher 3"></p>
+
+
+
+                                    	<p><strong>Examples :</strong>&nbsp;</p>
+
+                                    	<pre><strong>Text</strong> : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                                    		<strong>Shift</strong>: 23
+                                    		<strong>Cipher</strong>: XYZABCDEFGHIJKLMNOPQRSTUVW
+
+                                    		<strong>Text</strong> : ATTACKATONCE
+                                    		<strong>Shift</strong>: 4
+                                    		<strong>Cipher</strong>: EXXEGOEXSRGI</pre><h4>Advantages:</h4><ul><li>Easy to implement and use thus, making suitable for beginners to learn about encryption.</li><li>Can be physically implemented, such as with a set of rotating disks or a set of cards, known as a scytale, which can be useful in certain situations.</li><li>Requires only a small set of pre-shared information.</li><li>Can be modified easily to create a more secure variant, such as by using a multiple shift values or keywords.</li></ul><h4>Disadvantages:</h4><ul><li>It is not secure against modern decryption methods.</li><li>Vulnerable to known-plaintext attacks, where an attacker has access to both the encrypted and unencrypted versions of the same messages.</li><li>The small number of possible keys means that an attacker can easily try all possible keys until the correct one is found, making it vulnerable to a brute force attack.</li><li>It is not suitable for long text encryption as it would be easy to crack.</li><li>It is not suitable for secure communication as it is easily broken.</li><li>Does not provide confidentiality, integrity, and authenticity in a message.&nbsp;</li></ul>
+
+                                    		<p><strong>Features of caesar cipher:</strong></p>
+
+                                    		<ol><li>Substitution cipher: The Caesar cipher is a type of substitution cipher, where each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet.</li><li>Fixed key: The Caesar cipher uses a fixed key, which is the number of positions by which the letters are shifted. This key is known to both the sender and the receiver.</li><li>Symmetric encryption: The Caesar cipher is a symmetric encryption technique, meaning that the same key is used for both encryption and decryption.</li><li>Limited keyspace: The Caesar cipher has a very limited keyspace of only 26 possible keys, as there are only 26 letters in the English alphabet.</li><li>Vulnerable to brute force attacks: The Caesar cipher is vulnerable to brute force attacks, as there are only 26 possible keys to try.</li><li>Easy to implement: The Caesar cipher is very easy to implement and requires only simple arithmetic operations, making it a popular choice for simple encryption tasks.</li></ol>
+
+                                    		<p><strong>Rules for the Caesar Cipher:</strong></p><div style="text-align:center;margin:20px 0;max-height: 280px;" id="GFG_AD_gfg_outstream_incontent"></div>
+
+                                    		<ol><li>Choose a number between 1 and 25. This will be your &#8220;shift&#8221; value.</li><li>Write down the letters of the alphabet in order, from A to Z.</li><li>Shift each letter of the alphabet by the &#8220;shift&#8221; value. For example, if the shift value is 3, A would become D, B would become E, C would become F, and so on.</li><li>Encrypt your message by replacing each letter with the corresponding shifted letter. For example, if the shift value is 3, the word &#8220;hello&#8221; would become &#8220;khoor&#8221;.</li><li>To decrypt the message, simply reverse the process by shifting each letter back by the same amount. For example, if the shift value is 3, the encrypted message &#8220;khoor&#8221; would become &#8220;hello&#8221;.</li></ol>
+
+                                    		<p><strong>Algorithm for Caesar Cipher:</strong>&nbsp;<br><strong>Input:</strong>&nbsp;</p>
+
+                                    		<ol><li>Choose a shift value between 1 and 25.</li><li>Write down the alphabet in order from A to Z.</li><li>Create a new alphabet by shifting each letter of the original alphabet by the shift value. For example, if the shift value is 3, the new alphabet would be:</li><li>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>D E F G H I J K L M N O P Q R S T U V W X Y Z A B C</li><li>Replace each letter of the message with the corresponding letter from the new alphabet. For example, if the shift value is 3, the word &#8220;hello&#8221; would become &#8220;khoor&#8221;.</li><li>To decrypt the message, shift each letter back by the same amount. For example, if the shift value is 3, the encrypted message &#8220;khoor&#8221; would become &#8220;hello&#8221;.</li></ol>
+
+                                    		<p><strong>Procedure:</strong>&nbsp;</p>
+
+                                    		<ul><li>Traverse the given text one character at a time .</li><li>For each character, transform the given character as per the rule, depending on whether we&#8217;re encrypting or decrypting the text.</li><li>Return the new string generated.</li></ul>
+
+                                    		<p>A program that receives a Text (string) and Shift value( integer) and returns the encrypted text.&nbsp;</p>
+                                    	</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of the about page -->
+                          
+                            		<div class="container jumbotron page" id="contactPage">
+                  
+                            			<h1 style="margin:25px">Monoalphabetic Cypher in Cryptography</h1>
+                            			<div class="container" style="margin-left: 30%;">
+                            				<button class="btn btn-primary" onclick="showMonoalphabetic()">ENCRYPT & DECREPT HERE</button>
+                            				<button class="btn btn-primary" onclick="showMonoalphabeticQuiz()">TAKE QUIZ</button>
+                            			</div>
+                            			<div class="container" id="MonoalphabeticQuiz">
+                            				<h1 class="text-center">Quiz</h1>
+                            				<form id="quizFormMonolphabetic">
+                            					<div class="form-group">
+                            						<label for="q1">Question 1: What is the encrypted code for text "pavani"?</label>
+                            						<select class="form-control" id="m1" required>
+                            							<option value="">Select Answer</option>
+                            							<option value="1">HQCQFO</option>
+                            							<option value="2">HQCQFQ</option>
+                            							<option value="3">HQCQFJ</option>
+                            						</select>
+                            					</div>
+                            					<div class="form-group">
+                            						<label for="q2">Question 2: What is the decrypted code for "chadhrangam"?</label>
+                            						<select class="form-control" id="m2" required>
+                            							<option value="">Select Answer</option>
+                            							<option value="1">VPKMPDKYOKY</option>
+                            							<option value="2">VPKMPDKYOKZ</option>
+                            							<option value="3">VPKMPDKYOKM</option>
+                            						</select>
+                            					</div>
+                            					<div class="form-group">
+                            						<label for="q3">Question 3: What is an example of a famous historical monoalphabetic cipher?</label>
+                            						<select class="form-control" id="m3" required>
+                            							<option value="">Select Answer</option>
+                            							<option value="1">Nucleus</option>
+                            							<option value="2">substution</option>
+                            							<option value="3">Caesar</option>
+                            						</select>
+                            					</div>
+                            					<div class="form-group">
+                            						<label for="q4">Question 4: What are some weaknesses of the monoalphabetic cipher?</label>
+                            						<select class="form-control" id="m4" required>
+                            							<option value="">Select Answer</option>
+                            							<option value="1">frequency</option>
+                            							<option value="2">algorithm</option>
+                            							<option value="3">substution</option>
+                            						</select>
+                            					</div>
+                            					<div class="form-group">
+                            						<label for="q5">Question 5: How many possible keys are there in a monoalphabetic cipher?</label>
+                            						<select class="form-control" id="m5" required>
+                            							<option value="">Select Answer</option>
+                            							<option value="1">25!</option>
+                            							<option value="2">26!</option>
+                            							<option value="3">23!</option>
+                            						</select>
+                            					</div>
+                            					<div class="form-group">
+                            						<label for="q6">Question 6: What is a key in a monoalphabetic cipher?</label>
+                            						<select class="form-control" id="m6" required>
+                            							<option value="">Select Answer</option>
+                            							<option value="1">factoring</option>
+                            							<option value="2">reducing</option>
+                            							<option value="3">mapping</option>
+                            						</select>
+                            					</div>
+                            					<button type="submit" class="btn btn-primary">Submit</button>
+                            				</form>
+                            				<div id="results" class="mt-4"></div>
+                            			</div>
+                            			<div class="container form-group" id="monoalphabeticForm">
+                            				<label for="monoPlaintext">monoPlaintext:</label>
+                            				<input type="text" class="form-control" id="monoPlaintext">
+                            				
+                            				<button style="margin:20px" class="btn btn-primary" type="button" onclick="encryptMonoalphabetic()">Encrypt</button>
+                            				<button style="margin:20px" class="btn btn-primary" type="button"  onclick="decryptMonoalphabetic()">Decrypt</button>
+                            				<div class="badge badge-success monoResult" id="monoResult"></div>
+                            			</div>
+                            			<!-- three dot menu -->
+                            			<div class="text">
+                            				<div><b><h2 style="text-decoration: underline;margin: 30px;">Learning Material</h2></b></div>
+                            				<p>
+                            				A monoalphabetic cipher is any cipher in which the letters of the plain text are mapped to cipher text letters based on a single alphabetic key. Examples of monoalphabetic ciphers would include the Caesar-shift cipher, where each letter is shifted based on a numeric key, and the atbash cipher, where each letter is mapped to the letter symmetric to it about the center of the alphabet. 
+                            				Monoalphabetic Cipher is a cipher where the letters of the plain text are mapped to ciphertext letters based on a single alphabetic key. It is a one to one mapping.</p>
+                            				<p>Given plain text, the task is to implement the Monoalphabetic Cipher.</p>
+                            				<p>normalCharLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
+                    'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
+                    's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+codedCharLower = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O',
+                    'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K',
+                    'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M'];</p>
+                    <p>by mapping the normalCharLower to codedCharLower the substion of the text will takes place</p>
+                            				<p><strong>Examples:</strong></p>
+                            				<pre>
+                            					<i><strong>Input:</strong></i>  welcome to geeksforgeeks
+                            					<i><strong>Output:</strong></i> Plain text: welcome to geeksforgeeks
+                            					Encrypted message: VTSEGDT ZG UTTALYGKUTTAL
+                            					Decrypted message: welcome to geeksforgeeks
+
+                            					<i><strong>Input:</strong></i>  Live the moment
+                            					<i><strong>Output:</strong></i> Plain text: Live the moment
+                            					Encrypted message: SOCT ZIT DGDTFZ
+                            				Decrypted message: live the moment
+                            			</pre>
+                            				<p><strong>Mapping characters to cipher text letters which we used in our algorithm:</strong></p>
+                            				<figure class="table">
+                            					<table class="table table-bordered">
+                            						<tbody>
+                            							<tr>
+                            								<td><strong>a</strong></td>
+                            								<td><strong>b</strong></td>
+                            								<td><strong>c</strong></td>
+                            								<td><strong>d</strong></td>
+                            								<td><strong>e</strong></td>
+                            								<td><strong>f</strong></td>
+                            								<td><strong>g</strong></td>
+                            								<td><strong>h</strong></td>
+                            								<td><strong>i</strong></td>
+                            								<td><strong>j</strong></td>
+                            							</tr>
+                            							<tr>
+                            								<td>Q</td>
+                            								<td>W</td>
+                            								<td>E</td>
+                            								<td>R</td>
+                            								<td>T</td>
+                            								<td>Y</td>
+                            								<td>U</td>
+                            								<td>I</td>
+                            								<td>O</td>
+                            								<td>P</td>
+                            							</tr>
+                            							<tr>
+                            								<td><strong>k</strong></td>
+                            								<td><strong>l</strong></td>
+                            								<td><strong>m</strong></td>
+                            								<td><strong>n</strong></td>
+                            								<td><strong>o</strong></td>
+                            								<td><strong>p</strong></td>
+                            								<td><strong>q</strong></td>
+                            								<td><strong>r</strong></td>
+                            								<td><strong>s</strong></td>
+                            								<td><strong>t</strong></td>
+                            							</tr>
+                            							<tr>
+                            								<td>A</td>
+                            								<td>S</td>
+                            								<td>D</td>
+                            								<td>F</td>
+                            								<td>G</td>
+                            								<td>H</td>
+                            								<td>J</td>
+                            								<td>K</td>
+                            								<td>L</td>
+                            								<td>Z</td>
+                            							</tr>
+                            							<tr>
+                            								<td><strong>u</strong></td>
+                            								<td><strong>v</strong></td>
+                            								<td><strong>w</strong></td>
+                            								<td><strong>x</strong></td>
+                            								<td><strong>y</strong></td>
+                            								<td colspan="5"><strong>z</strong></td>
+                            							</tr>
+                            							<tr>
+                            								<td>X</td>
+                            								<td>C</td>
+                            								<td>V</td>
+                            								<td>B</td>
+                            								<td>N</td>
+                            								<td colspan="5">M</td>
+                            							</tr>
+                            						</tbody>
+                            					</table>
+                            				</figure>
+                            				<p><strong>Explanation of Output:</strong></p>
+                            				<figure class="table">
+                            					<table class="table table-bordered">
+                            						<tbody>
+                            							<tr>
+                            								<td><strong>W </strong>&#8211; w &#8211; V</td>
+                            								<td><strong>t</strong> &#8211; Z</td>
+                            								<td><strong>&nbsp;g</strong> &#8211; U</td>
+                            								<td><strong>&nbsp;g </strong>&#8211; U</td>
+                            							</tr>
+                            							<tr>
+                            								<td><strong>e </strong>&#8211; T&nbsp;</td>
+                            								<td><strong>o</strong> &#8211; G</td>
+                            								<td><strong>&nbsp;e </strong>&#8211; T</td>
+                            								<td><strong>&nbsp;e </strong>&#8211; T</td>
+                            							</tr>
+                            							<tr>
+                            								<td><strong>l</strong> &#8211; S</td>
+                            								<td>&nbsp;</td>
+                            								<td><strong>&nbsp;e </strong>&#8211; T</td>
+                            								<td><strong>&nbsp;e </strong>&#8211; T</td>
+                            							</tr>
+                            							<tr>
+                            								<td><strong>c</strong> &#8211; E</td>
+                            								<td>&nbsp;</td>
+                            								<td><strong>&nbsp;k </strong>&#8211; A</td>
+                            								<td><strong>&nbsp;k </strong>&#8211; A</td>
+                            							</tr>
+                            							<tr>
+                            								<td><strong>o </strong>&#8211; G</td>
+                            								<td>&nbsp;</td>
+                            								<td><strong>s </strong>&#8211; L</td>
+                            								<td><strong>&nbsp;s </strong>&#8211; L</td>
+                            							</tr>
+                            							<tr>
+                            								<td><strong>m </strong>&#8211; D</td>
+                            								<td>&nbsp;</td>
+                            								<td><strong>f</strong> &#8211; Y</td>
+                            								<td>&nbsp;</td>
+                            							</tr>
+                            							<tr>
+                            								<td><strong>e </strong>&#8211; T</td>
+                            								<td>&nbsp;</td>
+                            								<td><strong>o</strong> &#8211; G</td>
+                            								<td>&nbsp;</td>
+                            							</tr>
+                            							<tr>
+                            								<td>&nbsp;</td>
+                            								<td>&nbsp;</td>
+                            								<td><strong>r</strong> &#8211; K</td>
+                            								<td>&nbsp;</td>
+                            							</tr>
+                            						</tbody>
+                            					</table>
+                            				</figure>
+                            				<p><strong>Welcome to geeksforgeeks → </strong>VTSEGDT ZG UTTALYGKUTTAL</p>
+                            				<p><strong>Approach:&nbsp;</strong></p><div id="GFG_AD_Desktop_InContent_ATF_336x280" style="text-align:center;max-height: 280px;"></div><div id="GFG_AD_gfg_mobile_336x280_1" style="margin: 5px 0;"></div>
+                            				<p><strong>1.</strong> &nbsp;Create two char arrays, one for normal alphabets(say normalChar[]) and another is for encoding(say codedChar[]).</p>
+                            				<p><strong>2.</strong> &nbsp;We will use two functions:</p>
+                            				<ul>
+                            					<li><strong>stringEncryption:</strong> We pass string(string with all characters in lower case) as a parameter. Initialize an empty string(say encryptedString<strong>)</strong>. We use for loop and compare each character with normal char array, whenever the condition is true, add the character with the corresponding index of codedChar to the encrypted string. In the case of special characters, we will add them directly to the string.</li>
+                            					<li><strong>stringDescryption:</strong> We pass the encrypted string as the parameter. Initialize an empty string(say descryptedString). In the same way, we run the for loop and add the character with the corresponding index of normalChar to the decrypted string. In the case of special characters, we will add them directly to the string.</li>
+                            				</ul>
+                            			</div>
+                            		</div>
+               
+
+                        </body>
+                        </html>
+                        <script src="script.js"></script>
